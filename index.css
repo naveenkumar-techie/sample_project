@@ -968,7 +968,10 @@ li{
         bottom: -40% !important;
     }
     .testimonials-heading h5 {
-        font-size: 27px;
+        font-size: 20px;
+    }
+    .testimonials-heading h6 {
+        font-size: 20px !important;
     }
     .testimonials-content {
         font-size: 18px;
