@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- Split-text -->
+    <script src="https://unpkg.com/split-type"></script>
     <!-- Gsap -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
 
@@ -228,12 +230,12 @@
                     <div class="col-4 col-md-3 p-0 destination-card-row" style="width: 373px;">
                         <div class="destination-card">
                             <img src="asserts/Rectangle 6.svg" class="card-img-top" alt="...">
-                            <div class="destination-card-body px-md-3">
+                            <div class="destination-card-body">
                                 <div class="row p-0 destination-card-body-row">
                                 <div class="col-8 md-col-12 p-0 text-start">
                                     <h6 class="destination-card-title">Paradise Beach, Bantayan Island</h6>
                                 </div>
-                                <div class="col-4 md-col-12 p-0 text-md-start text-end">
+                                <div class="col-4 md-col-12 p-0 text-end">
                                     <h6 class="card-title destination-heading">$550.16</h6>
                                 </div>
                                 </div>
@@ -245,12 +247,12 @@
                     <div class="col-4 col-md-3 p-0 destination-card-row" style="width: 373px;">
                         <div class="destination-card">
                             <img src="asserts/Rectangle 6 (1).svg" class="card-img-top" alt="...">
-                            <div class="destination-card-body px-md-3">
+                            <div class="destination-card-body">
                                 <div class="row p-0 destination-card-body-row">
                                     <div class="col-8 md-col-12 p-0 text-start">
                                         <h6 class="destination-card-title">Ocean with full of Colors</h6>
                                     </div>
-                                    <div class="col-4 col-4 md-col-12 p-0 text-md-start text-end">
+                                    <div class="col-4 col-4 md-col-12 p-0 text-end">
                                         <h6 class="card-title destination-heading">$20.99</h6>
                                     </div>
                                 </div>
@@ -262,12 +264,12 @@
                     <div class="col-4 col-md-3 p-0 destination-card-row" style="width: 373px;">
                         <div class="destination-card">
                             <img src="asserts/Rectangle 6 (2).svg" class="card-img-top" alt="...">
-                            <div class="destination-card-body px-md-3">
+                            <div class="destination-card-body">
                                 <div class="row p-0 destination-card-body-row">
                                     <div class="col-8 md-col-12 p-0 text-start">
                                         <h6 class="destination-card-title">Mountain View, Above the cloud</h6>
                                     </div>
-                                    <div class="col-4 col-4 md-col-12 p-0 text-md-start text-end">
+                                    <div class="col-4 col-4 md-col-12 p-0 text-end">
                                         <h6 class="card-title destination-heading">$150.99</h6>
                                     </div>
                                 </div>
@@ -293,25 +295,25 @@
                             <h3 class="sub-heading p-0 m-0">
                                 We helping you find your dream location
                             </h3>
-                            <p class="banner-feed p-0 m-0 feed-left">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
+                            <p class="banner-feed p-0 m-0 feed-left" id="banner-para">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
                         </div>
                         <div class="row text-center travel-count">
                             <div class="row d-flex client p-0">
-                                <div class="col sm-col-12 client-card">
+                                <div class="col sm-col-12 client-card" id="client-card-1">
                                     <h4 class="m-0 orange">500+</h4>
                                     <p class="m-0">Holiday Package</p>
                                 </div>
-                                <div class="col sm-col-12 client-card">
+                                <div class="col sm-col-12 client-card" id="client-card-2">
                                     <h4 class="m-0 orange">100</h4>
                                     <p class="m-0">Luxury Hotel</p>
                                 </div>
                             </div>
                             <div class="row d-flex client p-0">
-                                <div class="col sm-col-12 client-card">
+                                <div class="col sm-col-12 client-card" id="client-card-3">
                                     <h4 class="m-0 orange">7</h4>
                                     <p class="m-0">Premium Airlines</p>
                                 </div>
-                                <div class="col sm-col-12 client-card">
+                                <div class="col sm-col-12 client-card" id="client-card-4">
                                     <h4 class="m-0 orange">2k+</h4>
                                     <p class="m-0">Happy Customer</p>
                                 </div>
@@ -336,7 +338,7 @@
                                         We offer best services
                                     </h3>
                                 </div>
-                                <p class="banner-feed p-0 m-0 feed-left">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
+                                <p class="banner-feed p-0 m-0 feed-left" id="features-para">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
                             </div>
                         </div>
                         <div class="row d-flex flex-column features-colm-row">
@@ -496,9 +498,9 @@
                         <div class="row">
                             <div class="col d-flex gap-5 p-0 justify-content-center contact-data">
                                 <div class="input-container d-flex gap-3 align-items-center">
-                                    <img src="asserts/Vector (3).svg" alt="Email" height="24px" width="26px">
-                                    <input type="text" class="h-100 w-100 contact-email" placeholder="Your Email">
-                                  </div>
+                                    <img src="asserts/Vector (3).svg" id="emailIcon" alt="Email" height="24px" width="26px">
+                                    <input type="text" class="h-100 w-100 contact-email" placeholder="Your Email" id="emailInput">
+                                </div>
                                 <button class="btn-active btn" style="padding: 32px 64px; border-radius: 32px; font-weight: 600; font-size: 23px;">Subscribe</button>
                             </div>
                         </div>
@@ -525,7 +527,7 @@
                         </div>
                         <div class="col p-0 footer-media">
                             <img src="asserts/Vector (4).svg" alt="Facebook" width="32px" height="32px">
-                            <img src="asserts/Group.svg" alt="Twitter" width="32px" height="32px">
+                            <img src="asserts/twitter-x.svg" alt="Twitter" width="32px" height="32px">
                             <img src="asserts/Group 8.svg" alt="Instagram" width="32px" height="32px">
                         </div>
                     </div>
@@ -596,6 +598,15 @@
             </div>
             <img src="asserts/OBJECTS (2).svg" alt="Side-design" class="side-footer">
          </section>
+         <hr>
+         <footer>
+            <div class="container-fluid">
+                <div class="row copyrights">
+                    <div class="col p-0 right">Copyrights © 2025 Nutz Technovation Pvt.Ltd.</div>
+                    <div class="col p-0 reserved">All rights reserved.</div>
+                </div>
+            </div>
+         </footer>
 
          <script>
             // Card Swiping Animation
